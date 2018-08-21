@@ -96,7 +96,12 @@ public class SparseArrayIterator implements ListIterator<T> {
     }
 
     @Override
-    public void add(T t) {
-        throw new UnsupportedOperationException();
+    public void add(T object) {
+        if (!mCurserNoPlace) {
+            mCursor++;
+            mSparseArray.put(currentKey(), object);
+        } else {
+            throw new IllegalStateException();
+        }
     }
 }

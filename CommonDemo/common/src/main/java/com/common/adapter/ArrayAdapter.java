@@ -6,8 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import java.util.Iterator;
-
 public class ArrayAdapter<T> extends BaseAdapter {
     protected Context mContext;
     protected SparseArray<T> mData;
@@ -30,10 +28,10 @@ public class ArrayAdapter<T> extends BaseAdapter {
             mData.clear();
             mData = data.clone();
         } else {
-            Iterator<T> iterator = data.getItera
-            mData.append();
+            for (int i = 0; i < data.size(); i++) {
+                mData.append(mData.size(), data.get(i));
+            }
         }
-
     }
 
     @Override
