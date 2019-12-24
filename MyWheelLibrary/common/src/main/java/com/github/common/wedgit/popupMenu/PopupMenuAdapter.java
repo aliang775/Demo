@@ -4,14 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.common.adapter.ArrayAdapter;
-import com.xchat.R;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class PopupMenuAdapter extends ArrayAdapter<PopupMenuItem> {
@@ -26,7 +22,6 @@ public class PopupMenuAdapter extends ArrayAdapter<PopupMenuItem> {
         this.list = list;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
-
 
     @Override
     public int getCount() {

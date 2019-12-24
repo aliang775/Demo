@@ -44,7 +44,7 @@ public class ArrayAdapter<T> extends BaseAdapter {
     }
 
     @Override
-    public T getItem(int position) {
+    public Object getItem(int position) {
         if (position < 0 || position >= getCount()) {
             throw new IllegalStateException("couldn't get view at this position " + position);
         }
