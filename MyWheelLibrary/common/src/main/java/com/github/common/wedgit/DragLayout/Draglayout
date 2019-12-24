@@ -1,0 +1,13 @@
+import android.content.Context
+import android.support.v4.widget.ViewDragHelper
+import android.util.AttributeSet
+import android.view.View
+import android.widget.RelativeLayout
+
+class DragLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : RelativeLayout(context, attrs, defStyleAttr) {
+    private lateinit var mDragHelper: ViewDragHelper
+    private var mDragView: View? = null
+
+
+
+}
